@@ -10,11 +10,14 @@ import SwiftUI
 @main
 struct TransitAppApp: App {
     @StateObject private var dataController = DataController()
+    @StateObject var viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
 //            ContentView()
             CategoryView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
+                .environmentObject(viewModel)
         }
     }
 }

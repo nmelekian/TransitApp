@@ -19,4 +19,5 @@ struct Responses: Identifiable {
     var location = ""
     var name = ""
     var phoneNumber = ""
+    var image: Data = .init(count: 0)
 }

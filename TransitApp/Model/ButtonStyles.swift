@@ -12,9 +12,10 @@ struct ButtonCategoryStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
+            .frame(minWidth: 99, minHeight: 99)
             .background(Color("CategoryButton"))
             .clipShape(RoundedRectangle(cornerRadius: 15))
-            .frame(minWidth: 99, minHeight: 99)
+            
             
     }
 }

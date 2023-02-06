@@ -20,6 +20,8 @@
 		A6BF82B3298AAA2B0032BA67 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF82B2298AAA2B0032BA67 /* ButtonStyles.swift */; };
 		A6D343A3299140A00016623D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D343A2299140A00016623D /* Category.swift */; };
 		A6D343A5299142590016623D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D343A4299142590016623D /* ViewModel.swift */; };
+		A6D343A7299153AC0016623D /* FeedbackEventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D343A6299153AC0016623D /* FeedbackEventDetailsView.swift */; };
+		A6D343A9299153BD0016623D /* FeedbackPersonalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D343A8299153BD0016623D /* FeedbackPersonalDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		A6BF82B2298AAA2B0032BA67 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		A6D343A2299140A00016623D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A6D343A4299142590016623D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A6D343A6299153AC0016623D /* FeedbackEventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackEventDetailsView.swift; sourceTree = "<group>"; };
+		A6D343A8299153BD0016623D /* FeedbackPersonalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPersonalDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 			children = (
 				A6BF82772982AD7B0032BA67 /* ContentView.swift */,
 				A6BF82AE298957E20032BA67 /* CategoryView.swift */,
+				A6D343A6299153AC0016623D /* FeedbackEventDetailsView.swift */,
+				A6D343A8299153BD0016623D /* FeedbackPersonalDetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,12 +195,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6BF828D2982BA270032BA67 /* Response+CoreDataProperties.swift in Sources */,
+				A6D343A7299153AC0016623D /* FeedbackEventDetailsView.swift in Sources */,
 				A6D343A3299140A00016623D /* Category.swift in Sources */,
 				A6BF82782982AD7B0032BA67 /* ContentView.swift in Sources */,
 				A6D343A5299142590016623D /* ViewModel.swift in Sources */,
 				A6BF82892982AFFC0032BA67 /* DataController.swift in Sources */,
 				A6BF82B3298AAA2B0032BA67 /* ButtonStyles.swift in Sources */,
 				A6BF828C2982BA270032BA67 /* Response+CoreDataClass.swift in Sources */,
+				A6D343A9299153BD0016623D /* FeedbackPersonalDetailsView.swift in Sources */,
 				A6BF82912982DF1F0032BA67 /* ResponseModel.swift in Sources */,
 				A6BF82872982AFCC0032BA67 /* TransitFeedback.xcdatamodeld in Sources */,
 				A6BF82AF298957E20032BA67 /* CategoryView.swift in Sources */,

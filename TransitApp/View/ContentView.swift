@@ -11,8 +11,7 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     
-  
-    @StateObject var userResponse = Responses()
+    @EnvironmentObject var viewModel: ViewModel
     
     @State private var complaints = ["Bus shelter", "Bus cleanliness", "Bus safety", "late/missing bus"]
     @FetchRequest(sortDescriptors: []) var responses: FetchedResults<Response>
@@ -21,18 +20,18 @@ struct ContentView: View {
         
         VStack {
             List{
-                    TextField("Bus Routes", text: $userResponse.busRoute)
-                    Picker("Bus Number", selection: $userResponse.busNumber) {
+                TextField("Bus Routes", text: $viewModel.currentResponse.busRoute)
+                Picker("Bus Number", selection: $viewModel.currentResponse.busNumber) {
                         ForEach(1..<101) {
                             Text(String($0))
                         }
                     }
-                    Picker("Complaint type", selection: $userResponse.complaintType) {
+                Picker("Complaint type", selection: $viewModel.currentResponse.complaintType) {
                             ForEach(complaints, id: \.self) {
                                 Text($0)
                             }
                         }
-                    TextField("Name", text: $userResponse.name)
+                TextField("Name", text: $viewModel.currentResponse.name)
                 
             }
             
@@ -46,5 +45,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ViewModel())
     }
 }

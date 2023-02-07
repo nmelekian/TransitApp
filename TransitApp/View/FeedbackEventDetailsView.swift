@@ -13,6 +13,7 @@ struct FeedbackEventDetailsView: View {
     
     @State private var image: Data = .init(count: 0)
     @State private var showSheet = false
+  
     
     var body: some View {
         
@@ -36,7 +37,6 @@ struct FeedbackEventDetailsView: View {
                     if image.count != 0 {
                         Image(uiImage: UIImage(data: self.image)!)
                             .resizable()
-                        //                              .cornerRadius(50)
                             .frame(width: 100, height: 100)
                             .background(Color.black.opacity(0.2))
                             .aspectRatio(contentMode: .fill)
@@ -48,8 +48,7 @@ struct FeedbackEventDetailsView: View {
                          .font(.headline)
                          .frame(maxWidth: .infinity)
                          .frame(height: 50)
-                         .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.262745098, green: 0.0862745098, blue: 0.8588235294, alpha: 1)), Color(#colorLiteral(red: 0.5647058824, green: 0.462745098, blue: 0.9058823529, alpha: 1))]), startPoint: .top, endPoint: .bottom))
-//                         .cornerRadius(16)
+                         .background(.blue)
                          .foregroundColor(.white)
                              .padding(.horizontal, 20)
                              .onTapGesture {
@@ -61,12 +60,13 @@ struct FeedbackEventDetailsView: View {
                                 // Pick an image from the photo library:
                         ImagePicker(show: self.$showSheet, image: self.$image)
                         
-
-                                //  If you wish to take a photo from camera instead:
                         }
-                
-                
-                Spacer(minLength: 200)
+              
+                Text("Select Date & Time")
+                    .font(.title)
+                DatePicker("Date & Time", selection: $viewModel.currentResponse.date)
+                    .datePickerStyle(.graphical)
+
                 
             }
             .padding()
@@ -76,6 +76,9 @@ struct FeedbackEventDetailsView: View {
                 Text("Next")
             }
             .buttonStyle(.borderedProminent)
+            .onDisappear {
+                viewModel.currentResponse.image = image
+            }
             
             
         }

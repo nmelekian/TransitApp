@@ -25,11 +25,26 @@ struct CategoryView: View {
                         VStack{
                             Button {
                                 viewModel.currentResponse.category = category
+                                
                             } label: {
-                                Image(systemName: category.imageName)
+                                VStack {
+                                    if viewModel.currentResponse.category == category {
+                                        Image(systemName: category.imageName)
+                                            .padding()
+                                            .background {
+                                                RoundedRectangle(cornerRadius: 10.0)
+                                                    .foregroundColor(.black)
+                                            }
+                                    } else {
+                                        Image(systemName: category.imageName)
+                                    }
+                                }
+                                
                             }
                             .buttonStyle(ButtonCategoryStyle())
                             .font(.title)
+                            
+                            Text(category.rawValue)
                         }
 
                         

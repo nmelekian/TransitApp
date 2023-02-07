@@ -6,12 +6,25 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct FeedbackPersonalDetailsView: View {
     @EnvironmentObject var viewModel: ViewModel
     @Environment(\.managedObjectContext) var moc
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text(viewModel.currentResponse.details)
+            Text(viewModel.currentResponse.complaintType)
+            if viewModel.currentResponse.image.count != 0 {
+                Image(uiImage: UIImage(data: viewModel.currentResponse.image)!)
+                    .resizable()
+                    .scaledToFit()
+            } else {
+                Image(systemName: "camera")
+            }
+            DatePicker("Date & Time", selection: $viewModel.currentResponse.date)
+        }
+        .padding()
     }
 }
 

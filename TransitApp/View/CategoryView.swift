@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CategoryView: View {
     @EnvironmentObject var viewModel: ViewModel
+    @Environment(\.managedObjectContext) var moc
     
     
     let columns = [GridItem(.fixed(100)),

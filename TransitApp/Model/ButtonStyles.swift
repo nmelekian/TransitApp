@@ -8,34 +8,40 @@
 import Foundation
 import SwiftUI
 
-struct ButtonCategoryStyle: ButtonStyle {
+struct UnselectedButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
             .frame(minWidth: 99, minHeight: 99)
-            .background(configuration.isPressed ? Color("CategoryButton") : Color(.gray))
+            .background(.secondary)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             
             
     }
     
-    func colorChange(change: Bool) -> Color {
-        var colors: Color
-        if change {
-            = Color("CategoryButton")
-        } else {
-            color = Color(.gray)
-        }
+   
+}
+
+struct SelectedButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .frame(minWidth: 99, minHeight: 99)
+            .background(Color("CategoryButton"))
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+        
         
     }
 }
 
-protocol Themeable {
-    var colorScheme: ColorScheme { get }
-}
 
-extension Themeable {
-    var buttonColor: Color {
-        colorScheme == .dark ? .black : .white
+    extension Button {
+        @ViewBuilder
+        func buttonStyle(change: Bool) -> some View {
+            if change {
+                buttonStyle(SelectedButtonStyle())
+            } else {
+                buttonStyle(UnselectedButtonStyle())
+            }
+        }
     }
-}

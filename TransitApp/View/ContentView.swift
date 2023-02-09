@@ -12,8 +12,8 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     
     @EnvironmentObject var viewModel: ViewModel
-    
     @FetchRequest(sortDescriptors: []) var responses: FetchedResults<Response>
+    
     
     var body: some View {
         VStack {

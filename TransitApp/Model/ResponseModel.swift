@@ -9,7 +9,7 @@ import Foundation
 
 struct Responses: Identifiable {
     var id = UUID()
-    var category: Category = .bus
+    var category: Category = .lateBus
     var categoryString = ""
     var busRoute = ""
     var busNumber: Int16 = 0

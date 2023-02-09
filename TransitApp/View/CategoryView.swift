@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryView: View {
     @EnvironmentObject var viewModel: ViewModel
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     
     let columns = [GridItem(.fixed(100)),
@@ -27,21 +28,12 @@ struct CategoryView: View {
                                 viewModel.currentResponse.category = category
                                 
                             } label: {
-                                VStack {
-                                    if viewModel.currentResponse.category == category {
+                                    
                                         Image(systemName: category.imageName)
-                                            .padding()
-                                            .background {
-                                                RoundedRectangle(cornerRadius: 10.0)
-                                                    .foregroundColor(.black)
-                                            }
-                                    } else {
-                                        Image(systemName: category.imageName)
-                                    }
-                                }
                                 
                             }
-                            .buttonStyle(ButtonCategoryStyle())
+                            .buttonStyle(change: (viewModel.currentResponse.category == category))
+                        
                             .font(.title)
                             
                             Text(category.rawValue)
@@ -60,6 +52,7 @@ struct CategoryView: View {
                 .buttonStyle(.borderedProminent)
             }
             .navigationTitle("Select a Category")
+            
         }
     }
 }

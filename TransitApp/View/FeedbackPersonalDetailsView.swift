@@ -22,7 +22,6 @@ struct FeedbackPersonalDetailsView: View {
             } else {
                 Image(systemName: "camera")
             }
-            DatePicker("Date & Time", selection: $viewModel.currentResponse.date)
         }
         .padding()
     }

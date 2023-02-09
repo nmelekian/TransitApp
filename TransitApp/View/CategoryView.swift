@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CategoryView: View, Themeable {
+struct CategoryView: View {
     @EnvironmentObject var viewModel: ViewModel
     @Environment(\.managedObjectContext) var moc
     @Environment(\.colorScheme) var colorScheme: ColorScheme
@@ -28,19 +28,11 @@ struct CategoryView: View, Themeable {
                                 viewModel.currentResponse.category = category
                                 
                             } label: {
-                                    if viewModel.currentResponse.category == category {
+                                    
                                         Image(systemName: category.imageName)
-                                            .padding()
-                                            .background {
-                                                RoundedRectangle(cornerRadius: 10.0)
-                                                    .foregroundColor(buttonColor)
-                                            }
-                                    } else {
-                                        Image(systemName: category.imageName)
-                                    }
                                 
                             }
-                            .buttonStyle(ButtonCategoryStyle())
+                            .buttonStyle(change: (viewModel.currentResponse.category == category))
                         
                             .font(.title)
                             

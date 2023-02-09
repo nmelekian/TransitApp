@@ -13,9 +13,29 @@ struct ButtonCategoryStyle: ButtonStyle {
         configuration.label
             .padding()
             .frame(minWidth: 99, minHeight: 99)
-            .background(Color("CategoryButton"))
+            .background(configuration.isPressed ? Color("CategoryButton") : Color(.gray))
             .clipShape(RoundedRectangle(cornerRadius: 15))
             
             
+    }
+    
+    func colorChange(change: Bool) -> Color {
+        var colors: Color
+        if change {
+            = Color("CategoryButton")
+        } else {
+            color = Color(.gray)
+        }
+        
+    }
+}
+
+protocol Themeable {
+    var colorScheme: ColorScheme { get }
+}
+
+extension Themeable {
+    var buttonColor: Color {
+        colorScheme == .dark ? .black : .white
     }
 }

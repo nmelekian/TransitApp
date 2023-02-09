@@ -18,13 +18,12 @@ struct FeedbackEventDetailsView: View {
     var body: some View {
         
         NavigationStack {
-            
             ScrollView {
                 VStack(alignment: .leading) {
                     VStack(alignment: .leading){
                         Text("Tell Us More")
                             .font(.title)
-                            .fontWeight(.bold)
+                            .bold()
                         TextEditor(text: $viewModel.currentResponse.details)
                             .scrollContentBackground(.hidden)
                             .background(.regularMaterial)
@@ -35,7 +34,7 @@ struct FeedbackEventDetailsView: View {
                     
                     Text("Add A Photo?")
                         .font(.title)
-                        .fontWeight(.bold)
+                        .bold()
                     HStack {
                         if image.count != 0 {
                             Image(uiImage: UIImage(data: self.image)!)
@@ -46,43 +45,66 @@ struct FeedbackEventDetailsView: View {
                         } else {
                             Image(systemName: "camera")
                         }
-
-                         Text("Choose Photo")
-                             .font(.headline)
-                             .frame(maxWidth: .infinity)
-                             .frame(height: 50)
-                             .background(.blue)
-                             .foregroundColor(.white)
-                                 .padding(.horizontal, 20)
-                                 .onTapGesture {
-                                   showSheet = true
-                                 }
+                        
+                        Spacer(minLength: 50)
+                        
+                        Text("Choose Photo")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 50)
+                            .background(Color("AccentColor"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                            .foregroundColor(.black)
+                            .padding(.horizontal, 20)
+                            .onTapGesture {
+                                showSheet = true
                             }
-                        .padding(.horizontal, 20)
-                        .sheet(isPresented: $showSheet) {
-                                    // Pick an image from the photo library:
-                            ImagePicker(show: self.$showSheet, image: self.$image)
-                            
-                            }
-                  
+                    }
+                   
+                    .sheet(isPresented: $showSheet) {
+                        // Pick an image from the photo library:
+                        ImagePicker(show: self.$showSheet, image: self.$image)
+                        
+                    }
+                    .padding()
+                   
+                    
                     Text("Select Date & Time")
                         .font(.title)
+                        .bold()
                     DatePicker("Date & Time", selection: $viewModel.currentResponse.date)
                         .datePickerStyle(.graphical)
-
+                    
                     
                 }
                 .padding()
+                
+                
+                NavigationLink {
+                    ShannonFeedbackPersonalDetailsView()
+                } label: {
+                    Text("Next")
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.black)
+                        .font(.title2)
+                        .bold()
+                }
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+                .onDisappear {
+                    viewModel.currentResponse.image = image
+                }
+                .padding()
             }
-            NavigationLink {
-                FeedbackPersonalDetailsView()
-            } label: {
-                Text("Next")
-            }
-            .buttonStyle(.borderedProminent)
-            .onDisappear {
-                viewModel.currentResponse.image = image
-            }
+//            NavigationLink {
+//                FeedbackPersonalDetailsView()
+//            } label: {
+//                Text("Next")
+//            }
+//            .buttonStyle(.borderedProminent)
+//            .onDisappear {
+//                viewModel.currentResponse.image = image
+//            }
             
             
         }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CategoryView: View, Themeable {
+struct CategoryView: View {
     @EnvironmentObject var viewModel: ViewModel
     @Environment(\.managedObjectContext) var moc
     @Environment(\.colorScheme) var colorScheme: ColorScheme
@@ -19,49 +19,51 @@ struct CategoryView: View, Themeable {
     
     var body: some View {
        NavigationStack{
-            VStack{
-                Spacer()
-                LazyVGrid(columns: columns) {
-                    ForEach(Category.allCases, id: \.self) { category in
-                        VStack{
-                            Button {
-                                viewModel.currentResponse.category = category
-                                
-                            } label: {
-                                    if viewModel.currentResponse.category == category {
-                                        Image(systemName: category.imageName)
-                                            .padding()
-                                            .background {
-                                                RoundedRectangle(cornerRadius: 10.0)
-                                                    .foregroundColor(buttonColor)
-                                            }
-                                    } else {
-                                        Image(systemName: category.imageName)
-                                    }
-                                
-                            }
-                            .buttonStyle(ButtonCategoryStyle())
-                        
-                            .font(.title)
-                            
-                            Text(category.rawValue)
-                        }
-
-                        
-                    }
-                }
-                Spacer()
-                
-                NavigationLink {
-                    FeedbackEventDetailsView()
-                } label: {
-                    Text("Next")
-                }
-                .buttonStyle(.borderedProminent)
-            }
-            .navigationTitle("Select a Category")
-            
-        }
+           ScrollView {
+               VStack{
+                   Text("Please choose the category that best fits your feedback.")
+                       .font(.system(.body, design: .rounded))
+                   
+                   LazyVGrid(columns: columns) {
+                       ForEach(Category.allCases, id: \.self) { category in
+                           VStack{
+                               Button {
+                                   viewModel.currentResponse.category = category
+                                   
+                               } label: {
+                                   
+                                   Image(systemName: category.imageName)
+                                   
+                               }
+                               .buttonStyle(change: (viewModel.currentResponse.category == category))
+                               
+                               .font(.title)
+                               
+                               Text(category.rawValue)
+                           }
+                           
+                           
+                       }
+                   }
+                   Spacer(minLength: 50)
+                   
+                   NavigationLink {
+                       FeedbackEventDetailsView()
+                   } label: {
+                       Text("Next")
+                           .frame(maxWidth: .infinity)
+                           .foregroundColor(.black)
+                           .font(.title2)
+                           .bold()
+                   }
+                   .buttonStyle(.borderedProminent)
+                   .controlSize(.large)
+               }
+               .navigationTitle("Select a Category")
+               .padding()
+           }
+           
+       }.padding()
     }
 }
 

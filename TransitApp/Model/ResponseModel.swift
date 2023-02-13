@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Responses: Identifiable {
+struct Responses: Identifiable, Hashable{
     var id = UUID()
     var category: Category = .lateBus
     var categoryString = ""
     var busRoute = ""
-    var busNumber: Int16 = 0
+    var busNumber: String = ""
     var complaintType = ""
     var date = Date()
     var details = ""

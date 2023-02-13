@@ -29,35 +29,54 @@ struct SubmitFeedbackView: View {
         NavigationView{
             VStack {
                 Form {
-                    Section (header: Text("Bus Route")) {
+                /*header: {
+                    Text("Bus Number")
+                        .headerProminence(.increased)
+                }*/
+                    
+                    Section (header: Text("Bus Route")
+                        .headerProminence(
+                            .increased)) {
                         
                         TextField("Bus Route",
                                   text: $viewModel.busRoute)}
                     
-                    Section(header: Text("Bus Number")) {
+                    Section(header: Text("Bus Number")
+                        .headerProminence(
+                            .increased)) {
+                                
                         TextField("Bus Number",
                                   text: $viewModel.busNumber)}
                     
-                    Section(header: Text("Location")) {
+                    Section(header: Text("Location")
+                        .headerProminence(
+                            .increased)) {
+                                
                         TextField("Location",
                                   text: $viewModel.location)
                         
                     }
                     
-                    Section(header: Text("Name")) {
+                    Section(header: Text("Name")
+                        .headerProminence(
+                            .increased)) {
+                                
                         TextField("Name",
                                   text: $viewModel.name)}
                     
-                    Section(header: Text("Email Address")) {
+                    Section(header: Text("Email Address").headerProminence(.increased)) {
+                        
                         TextField("Email Address",
                                   text: $viewModel.emailAddress)}
                     
-                    Section(header: Text("Details")) {
+                    Section(header: Text("Details").headerProminence(
+                        .increased)) {
                         
                         TextField("Details",
                                   text: $viewModel.details)}
                     
-                    Section(header: Text("Photo")) {
+                    Section(header: Text("Photo").headerProminence(.increased))
+                    {
                         
                         TextField("Photo",
                                   text: $viewModel.photo)

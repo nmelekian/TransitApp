@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B3C987FE-F94C-4B8C-8D99-BB7F81FF54D7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A68E774-A781-4756-90F5-079A17DEE106"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransitApp/View/FeedbackEventDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "FeedbackEventDetailsView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "3A68E774-A781-4756-90F5-079A17DEE106 - 6489585476f5ac27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TransitApp.FeedbackEventDetailsView.moc.getter : __C.NSManagedObjectContext"
+                  moduleName = "TransitApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickmelekian/Documents/TransitApp2/TransitApp/View/FeedbackEventDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "3A68E774-A781-4756-90F5-079A17DEE106 - e48d29f7052df500"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TransitApp.FeedbackEventDetailsView.init() -&gt; TransitApp.FeedbackEventDetailsView"
+                  moduleName = "TransitApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nickmelekian/Documents/TransitApp2/TransitApp/View/FeedbackEventDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

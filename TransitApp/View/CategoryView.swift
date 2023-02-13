@@ -19,42 +19,51 @@ struct CategoryView: View {
     
     var body: some View {
        NavigationStack{
-            VStack{
-                Spacer()
-                LazyVGrid(columns: columns) {
-                    ForEach(Category.allCases, id: \.self) { category in
-                        VStack{
-                            Button {
-                                viewModel.currentResponse.category = category
-                                viewModel.currentResponse.categoryString = category.rawValue
-                            } label: {
-                                    
-                                        Image(systemName: category.imageName)
-                                
-                            }
-                            .buttonStyle(change: (viewModel.currentResponse.category == category))
-                        
-                            .font(.title)
-                            
-                            Text(category.rawValue)
-                        }
-
-                        
-                    }
-                }
-                Spacer()
-                
-                NavigationLink {
-                    FeedbackEventDetailsView()
-                } label: {
-                    Text("Next")
-                }
-                .buttonStyle(.borderedProminent)
-                
-            }
-            .navigationTitle("Select a Category")
-            
-        }
+           ScrollView {
+               VStack{
+                   Text("Please choose the category that best fits your feedback.")
+                       .font(.system(.body, design: .rounded))
+                   
+                   LazyVGrid(columns: columns) {
+                       ForEach(Category.allCases, id: \.self) { category in
+                           VStack{
+                               Button {
+                                   viewModel.currentResponse.category = category
+                                   
+                               } label: {
+                                   
+                                   Image(systemName: category.imageName)
+                                   
+                               }
+                               .buttonStyle(change: (viewModel.currentResponse.category == category))
+                               
+                               .font(.title)
+                               
+                               Text(category.rawValue)
+                           }
+                           
+                           
+                       }
+                   }
+                   Spacer(minLength: 50)
+                   
+                   NavigationLink {
+                       FeedbackEventDetailsView()
+                   } label: {
+                       Text("Next")
+                           .frame(maxWidth: .infinity)
+                           .foregroundColor(.black)
+                           .font(.title2)
+                           .bold()
+                   }
+                   .buttonStyle(.borderedProminent)
+                   .controlSize(.large)
+               }
+               .navigationTitle("Select a Category")
+               .padding()
+           }
+           
+       }.padding()
     }
 }
 

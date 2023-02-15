@@ -76,7 +76,7 @@ struct ShannonFeedbackPersonalDetailsView: View {
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
                 
-            }
+            }.navigationTitle("More details")
             .padding()
         }
     }

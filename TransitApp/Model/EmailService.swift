@@ -10,15 +10,15 @@ import Combine
 
 
 class EmailService {
-    
+    var busRoute = ""
     func send(message: String) -> AnyPublisher<Bool, Error> {
         
         let data: Data  = {
             let email = "betterridefeedback@gmail.com"
             let json:[String:Any] = [
-                "personalizations":[["to": [["email": "burlywalter@gmail.com"]]]],
+                "personalizations":[["to": [["email": "betterridefeedback@gmail.com"]]]],
                 "from": ["email": email],
-                "subject": "Sending with SendGrid is Fun",
+                "subject": "Complaint for for \(busRoute)",
                 "content":[["type":"text/plain", "value":"and easy to do anywhere, even with Swift"]]
             ]
             

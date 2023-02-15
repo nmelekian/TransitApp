@@ -79,7 +79,6 @@
 		A6BF82742982AD7B0032BA67 /* TransitApp */ = {
 			isa = PBXGroup;
 			children = (
-				12E15212299D1D49001A29C3 /* Info.plist */,
 				A6BF82752982AD7B0032BA67 /* TransitAppApp.swift */,
 				A6D3439E29913FFC0016623D /* View */,
 				A6D343A1299140530016623D /* ViewModel */,
@@ -120,9 +119,8 @@
 				A6BF82772982AD7B0032BA67 /* ContentView.swift */,
 				A6BF82AE298957E20032BA67 /* CategoryView.swift */,
 				A6D343A6299153AC0016623D /* FeedbackEventDetailsView.swift */,
-				A6D343A8299153BD0016623D /* FeedbackPersonalDetailsView.swift */,
-				A61AC9A4299D276500B54E72 /* EmailPracticeView.swift */,
 				121CD93529955788007770E3 /* ShannonFeedbackPersonalDetailsView.swift */,
+				A61AC9A4299D276500B54E72 /* EmailPracticeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,7 +215,6 @@
 				A6BF82B3298AAA2B0032BA67 /* ButtonStyles.swift in Sources */,
 				A6BF828C2982BA270032BA67 /* Response+CoreDataClass.swift in Sources */,
 				A61AC9A5299D276500B54E72 /* EmailPracticeView.swift in Sources */,
-				A6D343A9299153BD0016623D /* FeedbackPersonalDetailsView.swift in Sources */,
 				A6BF82912982DF1F0032BA67 /* ResponseModel.swift in Sources */,
 				A6BF82872982AFCC0032BA67 /* TransitFeedback.xcdatamodeld in Sources */,
 				A6BF82AF298957E20032BA67 /* CategoryView.swift in Sources */,

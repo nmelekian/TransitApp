@@ -18,12 +18,12 @@ struct ContentView: View {
     @State private var contentHeight: CGFloat?
     
     
-    
+    @State var path = NavigationPath()
     @FetchRequest(sortDescriptors: []) var responses: FetchedResults<Response>
     
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             VStack {
                 Spacer()
                     .frame(height:150)
@@ -32,8 +32,8 @@ struct ContentView: View {
                     .bold()
                     .padding()
                 
-                Button {
-                    isShowingSheet.toggle()
+                NavigationLink {
+                    CategoryView()
                 } label: {
                     Text("+ Share Feedback")
                         .font(.title)
@@ -112,9 +112,8 @@ struct ContentView: View {
                     }
                     
                 }
-            }.sheet(isPresented: $isShowingSheet) {
-                CategoryView()
             }
+        
         }
     }
     

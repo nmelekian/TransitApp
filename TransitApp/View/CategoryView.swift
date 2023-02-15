@@ -11,7 +11,7 @@ struct CategoryView: View {
     @EnvironmentObject var viewModel: ViewModel
     @Environment(\.managedObjectContext) var moc
     @Environment(\.colorScheme) var colorScheme: ColorScheme
-    @State private var hi = "hi"
+    
     
     
     let columns = [GridItem(.fixed(100)),
@@ -19,7 +19,7 @@ struct CategoryView: View {
                    GridItem(.fixed(100))]
     
     var body: some View {
-       NavigationStack{
+      // NavigationStack{
            ScrollView {
                VStack{
                    Text("Please choose the category that best fits your feedback.")
@@ -66,7 +66,8 @@ struct CategoryView: View {
                .padding()
            }
            
-       }.padding()
+//       } // end of nav
+       .padding()
     }
 }
 

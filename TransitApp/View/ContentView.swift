@@ -18,12 +18,13 @@ struct ContentView: View {
     @State private var contentHeight: CGFloat?
     
     
-    @State var path = NavigationPath()
+   
+    
     @FetchRequest(sortDescriptors: []) var responses: FetchedResults<Response>
     
     
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack(path: $viewModel.path) {
             VStack {
                 Spacer()
                     .frame(height:150)

@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct Responses: Identifiable, Hashable{
+struct Responses: Identifiable, Equatable, Hashable{
     var id = UUID()
     var category: Category = .lateBus
     var categoryString = ""
     var busRoute = ""
     var busNumber: String = ""
-    var complaintType = ""
+    
     var date = Date()
     var details = ""
     var email = ""

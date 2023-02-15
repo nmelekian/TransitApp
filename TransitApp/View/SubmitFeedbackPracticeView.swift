@@ -20,7 +20,7 @@ struct SubmitFeedbackPracticeView: View {
     
     var body: some View {
         
-        NavigationStack {
+      //  NavigationStack {
             VStack {
                 Form {
                     Section {
@@ -86,8 +86,10 @@ struct SubmitFeedbackPracticeView: View {
                         }
                     }
                 }
-                NavigationLink {
-                    ContentView()
+                Button {
+                    viewModel.previousResponses.append(viewModel.currentResponse)
+                    viewModel.currentResponse = Responses()
+                    viewModel.path = NavigationPath()
                 } label: {
                     Text("Submit")
                 
@@ -95,20 +97,19 @@ struct SubmitFeedbackPracticeView: View {
                         .foregroundColor(.black)
                         .font(.title2)
                         .bold()
-                        .onTapGesture {
-                            vm.emailService.busRoute = viewModel.currentResponse.busRoute
-                            vm.sendEmailButtonTapped()
-                            viewModel.previousResponses.append(viewModel.currentResponse)
-                            viewModel.currentResponse = Responses()
-                            
-                        }
+//                        .simultaneousGesture(TapGesture().onEnded {
+//                           vm.sendEmailButtonTapped()
+//                            viewModel.previousResponses.append(viewModel.currentResponse)
+//                            viewModel.currentResponse = Responses()
+//
+//                        })
                 }.navigationTitle("More Details")
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
                 
             }.navigationTitle("More details")
             .padding()
-        }
+  //      } // End of NavigationStack
 
     }
 }

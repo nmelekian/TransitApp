@@ -24,7 +24,6 @@
 		A6D343A3299140A00016623D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D343A2299140A00016623D /* Category.swift */; };
 		A6D343A5299142590016623D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D343A4299142590016623D /* ViewModel.swift */; };
 		A6D343A7299153AC0016623D /* FeedbackEventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D343A6299153AC0016623D /* FeedbackEventDetailsView.swift */; };
-		A6D343A9299153BD0016623D /* FeedbackPersonalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D343A8299153BD0016623D /* FeedbackPersonalDetailsView.swift */; };
 		A6D343C72991D64E0016623D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D343C62991D64E0016623D /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +46,6 @@
 		A6D343A2299140A00016623D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A6D343A4299142590016623D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A6D343A6299153AC0016623D /* FeedbackEventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackEventDetailsView.swift; sourceTree = "<group>"; };
-		A6D343A8299153BD0016623D /* FeedbackPersonalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPersonalDetailsView.swift; sourceTree = "<group>"; };
 		A6D343C62991D64E0016623D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +79,7 @@
 		A6BF82742982AD7B0032BA67 /* TransitApp */ = {
 			isa = PBXGroup;
 			children = (
+				12E15212299D1D49001A29C3 /* Info.plist */,
 				A6BF82752982AD7B0032BA67 /* TransitAppApp.swift */,
 				A6D3439E29913FFC0016623D /* View */,
 				A6D343A1299140530016623D /* ViewModel */,
@@ -354,7 +353,7 @@
 				DEVELOPMENT_TEAM = L8NA8XZ3DK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TransitApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -383,7 +382,7 @@
 				DEVELOPMENT_TEAM = L8NA8XZ3DK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TransitApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -13,7 +13,7 @@ struct FeedbackEventDetailsView: View {
     
     @State private var image: Data = .init(count: 0)
     @State private var showSheet = false
-  
+    @FocusState private var isFocused: Bool
     
     var body: some View {
         
@@ -24,12 +24,25 @@ struct FeedbackEventDetailsView: View {
                         Text("Tell Us More")
                             .font(.title)
                             .bold()
+                        
                         TextEditor(text: $viewModel.currentResponse.details)
                             .scrollContentBackground(.hidden)
                             .background(.regularMaterial)
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                             .frame(minHeight: 85.0)
+                            .focused($isFocused)
+                            .accessibilityLabel("Add details textfield")
+                    
                         Spacer(minLength: 50)
+                    } 
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            
+                            Button("Done") {
+                                isFocused = false
+                            }
+                        }
                     }
                     
                     Text("Add A Photo?")
@@ -46,19 +59,20 @@ struct FeedbackEventDetailsView: View {
                             Image(systemName: "camera")
                         }
                         
-                        Spacer(minLength: 50)
+                        Spacer()
                         
-                        Text("Choose Photo")
-                            .font(.headline)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 50)
-                            .background(Color("AccentColor"))
-                            .clipShape(RoundedRectangle(cornerRadius: 15))
-                            .foregroundColor(.black)
-                            .padding(.horizontal, 20)
-                            .onTapGesture {
-                                showSheet = true
-                            }
+                        
+                        Button {
+                            showSheet = true
+                        } label: {
+                            Text("Choose Photo" )
+                                .font(.headline)
+                                .foregroundColor(.black)
+                                .padding()
+                            
+                            
+                        }.buttonStyle(.borderedProminent)
+                        
                     }
                    
                     .sheet(isPresented: $showSheet) {
@@ -96,15 +110,6 @@ struct FeedbackEventDetailsView: View {
                 }
                 .padding()
             }
-//            NavigationLink {
-//                FeedbackPersonalDetailsView()
-//            } label: {
-//                Text("Next")
-//            }
-//            .buttonStyle(.borderedProminent)
-//            .onDisappear {
-//                viewModel.currentResponse.image = image
-//            }
             
             
         }

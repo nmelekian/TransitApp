@@ -12,7 +12,7 @@ struct UnselectedButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
-            .frame(minWidth: 99, minHeight: 99)
+            .frame(minWidth: 75, minHeight: 75)
             .background(.secondary)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             
@@ -26,7 +26,7 @@ struct SelectedButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
-            .frame(minWidth: 99, minHeight: 99)
+            .frame(minWidth: 75, minHeight: 75)
             .background(Color("CategoryButton"))
             .clipShape(RoundedRectangle(cornerRadius: 15))
         

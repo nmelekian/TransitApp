@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @EnvironmentObject var viewModel: ViewModel
     
-    @State private var isShowingForm: Bool = false
+    @State private var isShowingSheet: Bool = false
     
     @State private var contentHeight: CGFloat?
     
@@ -33,7 +33,7 @@ struct ContentView: View {
                     .padding()
                 
                 Button {
-                    isShowingForm.toggle()
+                    isShowingSheet.toggle()
                 } label: {
                     Text("+ Share Feedback")
                         .font(.title)
@@ -42,7 +42,9 @@ struct ContentView: View {
                         .padding()
                     
                     
-                }.buttonStyle(.borderedProminent)
+                }
+            
+                .buttonStyle(.borderedProminent)
                     .padding()
                 
                 Spacer()
@@ -89,8 +91,6 @@ struct ContentView: View {
                                     Text("\(response.date)")
                                 }
                             }
-                            // viewModel.previousResponses[response].name
-                            //see Nick's NavStacks teachback
                             
                         } header: {
                             Text("Past Feedback")
@@ -101,7 +101,6 @@ struct ContentView: View {
             }
             .navigationDestination(for: Responses.self) { response in
                         Text("\(response.date)")
-                        Text("\(response.busRoute)")
                
                     
                     
@@ -113,6 +112,8 @@ struct ContentView: View {
                     }
                     
                 }
+            }.sheet(isPresented: $isShowingSheet) {
+                CategoryView()
             }
         }
     }

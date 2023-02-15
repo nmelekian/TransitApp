@@ -13,8 +13,7 @@ struct TransitAppApp: App {
     @StateObject var viewModel = ViewModel()
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            CategoryView()
+          ContentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
                 .environmentObject(viewModel)
         }

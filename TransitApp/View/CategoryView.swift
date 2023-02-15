@@ -40,7 +40,8 @@ struct CategoryView: View {
                                .font(.title)
                                
                                Text(category.rawValue)
-                           }
+                                   
+                           } .accessibilityElement(children: .combine)
                            
                            
                        }

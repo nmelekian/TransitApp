@@ -11,6 +11,7 @@ struct CategoryView: View {
     @EnvironmentObject var viewModel: ViewModel
     @Environment(\.managedObjectContext) var moc
     @Environment(\.colorScheme) var colorScheme: ColorScheme
+    @State private var hi = "hi"
     
     
     let columns = [GridItem(.fixed(100)),

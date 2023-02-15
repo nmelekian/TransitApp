@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		121CD93629955788007770E3 /* ShannonFeedbackPersonalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121CD93529955788007770E3 /* ShannonFeedbackPersonalDetailsView.swift */; };
+		A61AC9A3299D274100B54E72 /* EmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC9A2299D274100B54E72 /* EmailService.swift */; };
+		A61AC9A5299D276500B54E72 /* EmailPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC9A4299D276500B54E72 /* EmailPracticeView.swift */; };
 		A6BF82762982AD7B0032BA67 /* TransitAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF82752982AD7B0032BA67 /* TransitAppApp.swift */; };
 		A6BF82782982AD7B0032BA67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF82772982AD7B0032BA67 /* ContentView.swift */; };
 		A6BF827A2982AD7C0032BA67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6BF82792982AD7C0032BA67 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		121CD93529955788007770E3 /* ShannonFeedbackPersonalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFeedbackPersonalDetailsView.swift; sourceTree = "<group>"; };
+		A61AC9A2299D274100B54E72 /* EmailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailService.swift; sourceTree = "<group>"; };
+		A61AC9A4299D276500B54E72 /* EmailPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPracticeView.swift; sourceTree = "<group>"; };
 		A6BF82722982AD7B0032BA67 /* TransitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6BF82752982AD7B0032BA67 /* TransitAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitAppApp.swift; sourceTree = "<group>"; };
 		A6BF82772982AD7B0032BA67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				A6BF82902982DF1F0032BA67 /* ResponseModel.swift */,
 				A6D343A2299140A00016623D /* Category.swift */,
 				A6D343C62991D64E0016623D /* ImagePicker.swift */,
+				A61AC9A2299D274100B54E72 /* EmailService.swift */,
 				A6BF82882982AFFC0032BA67 /* DataController.swift */,
 				A6BF82852982AFCC0032BA67 /* TransitFeedback.xcdatamodeld */,
 			);
@@ -117,6 +122,7 @@
 				A6BF82AE298957E20032BA67 /* CategoryView.swift */,
 				A6D343A6299153AC0016623D /* FeedbackEventDetailsView.swift */,
 				A6D343A8299153BD0016623D /* FeedbackPersonalDetailsView.swift */,
+				A61AC9A4299D276500B54E72 /* EmailPracticeView.swift */,
 				121CD93529955788007770E3 /* ShannonFeedbackPersonalDetailsView.swift */,
 			);
 			path = View;
@@ -206,10 +212,12 @@
 				A6D343C72991D64E0016623D /* ImagePicker.swift in Sources */,
 				A6BF82782982AD7B0032BA67 /* ContentView.swift in Sources */,
 				A6D343A5299142590016623D /* ViewModel.swift in Sources */,
+				A61AC9A3299D274100B54E72 /* EmailService.swift in Sources */,
 				A6BF82892982AFFC0032BA67 /* DataController.swift in Sources */,
 				121CD93629955788007770E3 /* ShannonFeedbackPersonalDetailsView.swift in Sources */,
 				A6BF82B3298AAA2B0032BA67 /* ButtonStyles.swift in Sources */,
 				A6BF828C2982BA270032BA67 /* Response+CoreDataClass.swift in Sources */,
+				A61AC9A5299D276500B54E72 /* EmailPracticeView.swift in Sources */,
 				A6D343A9299153BD0016623D /* FeedbackPersonalDetailsView.swift in Sources */,
 				A6BF82912982DF1F0032BA67 /* ResponseModel.swift in Sources */,
 				A6BF82872982AFCC0032BA67 /* TransitFeedback.xcdatamodeld in Sources */,

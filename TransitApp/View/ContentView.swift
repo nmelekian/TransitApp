@@ -13,17 +13,16 @@ struct ContentView: View {
     
     @EnvironmentObject var viewModel: ViewModel
     
-    @State private var isShowingSheet: Bool = false
-    
-    @State private var contentHeight: CGFloat?
+    @StateObject private var pathStore = PathStore()
     
     
-    @State var path = NavigationPath()
+   
+    
     @FetchRequest(sortDescriptors: []) var responses: FetchedResults<Response>
     
     
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack {
             VStack {
                 Spacer()
                     .frame(height:150)
@@ -99,6 +98,7 @@ struct ContentView: View {
                         }
                     }
             }
+            
             .navigationDestination(for: Responses.self) { response in
                         Text("\(response.date)")
                
@@ -112,7 +112,7 @@ struct ContentView: View {
                     }
                     
                 }
-            }
+            }.navigationBarBackButtonHidden()
         
         }
     }

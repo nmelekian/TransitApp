@@ -10,18 +10,26 @@ import Combine
 
 
 class EmailService {
-    
+    var busRoute = ""
+    var viewModel = ViewModel()
     func send(message: String) -> AnyPublisher<Bool, Error> {
         
         let data: Data  = {
             let email = "betterridefeedback@gmail.com"
             let json:[String:Any] = [
-                "personalizations":[["to": [["email": "burlywalter@gmail.com"]]]],
+                "personalizations":[["to": [["email": "betterridefeedback@gmail.com"]]]],
                 "from": ["email": email],
-                "subject": "Sending with SendGrid is Fun",
-                "content":[["type":"text/plain", "value":"and easy to do anywhere, even with Swift"]]
+                "subject": "Complaint for for Bus \(viewModel.currentResponse.busRoute)",
+                "content":[["type":"text/plain", "value":"Bus Route: \(viewModel.currentResponse.busRoute) Bus Number: \(viewModel.currentResponse.busNumber) \n Category: \(viewModel.currentResponse.categoryString) \n Date & Time \(viewModel.currentResponse.date) \n Details: \(viewModel.currentResponse.details) \n Name: \(viewModel.currentResponse.name) \n \(viewModel.currentResponse.email) \n \(viewModel.currentResponse.phoneNumber) "]]
             ]
-            
+            // category
+            // details
+            //date and time
+            // bus route
+            // bus number
+            // name
+            // email
+            // phone number
             return try! JSONSerialization.data(withJSONObject: json, options: [])
         }()
         

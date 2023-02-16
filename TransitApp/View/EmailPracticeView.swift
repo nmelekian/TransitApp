@@ -42,7 +42,7 @@ struct EmailPractice_Previews: PreviewProvider {
 }
 
 class EmailPracticeViewModel: ObservableObject {
-    private let emailService = EmailService()
+    var emailService = EmailService()
     private var cancellables = Set<AnyCancellable>()
     @Published var text = ""
     @Published private(set) var label = "hi"

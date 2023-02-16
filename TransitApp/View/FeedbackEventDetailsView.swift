@@ -17,7 +17,7 @@ struct FeedbackEventDetailsView: View {
     
     var body: some View {
         
-        NavigationStack {
+//       NavigationStack {
             ScrollView {
                 VStack(alignment: .leading) {
                     VStack(alignment: .leading){
@@ -112,7 +112,7 @@ struct FeedbackEventDetailsView: View {
             }
             
             
-        }
+//        } // end of nav stack
     }
 }
 

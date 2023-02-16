@@ -13,11 +13,10 @@ struct ContentView: View {
     
     @EnvironmentObject var viewModel: ViewModel
     
-    @State private var isShowingSheet: Bool = false
-    
-    @State private var contentHeight: CGFloat?
+ 
     
     
+   
     
     @FetchRequest(sortDescriptors: []) var responses: FetchedResults<Response>
     
@@ -32,8 +31,8 @@ struct ContentView: View {
                     .bold()
                     .padding()
                 
-                Button {
-                    isShowingSheet.toggle()
+                NavigationLink {
+                    CategoryView()
                 } label: {
                     Text("+ Share Feedback")
                         .font(.title)
@@ -99,6 +98,7 @@ struct ContentView: View {
                         }
                     }
             }
+            
             .navigationDestination(for: Responses.self) { response in
                         Text("\(response.date)")
                
@@ -112,9 +112,8 @@ struct ContentView: View {
                     }
                     
                 }
-            }.sheet(isPresented: $isShowingSheet) {
-                CategoryView()
-            }
+            }.navigationBarBackButtonHidden()
+        
         }
     }
     

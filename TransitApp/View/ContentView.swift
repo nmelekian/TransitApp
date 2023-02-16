@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @EnvironmentObject var viewModel: ViewModel
     
-    @StateObject private var pathStore = PathStore()
+ 
     
     
    

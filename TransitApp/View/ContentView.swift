@@ -15,7 +15,7 @@ struct ContentView: View {
     
     @State private var isShowingSheet: Bool = false
     
-    @State private var contentHeight: CGFloat?
+    @State var path = NavigationPath()
     
     
     
@@ -23,7 +23,7 @@ struct ContentView: View {
     
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             VStack {
                 Spacer()
                     .frame(height:150)
@@ -46,6 +46,7 @@ struct ContentView: View {
             
                 .buttonStyle(.borderedProminent)
                     .padding()
+                
                 
                 Spacer()
                     .frame(height: 100)

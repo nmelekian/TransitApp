@@ -16,6 +16,7 @@ struct CategoryView: View {
     let columns = [GridItem(.fixed(100)),
                    GridItem(.fixed(100)),
                    GridItem(.fixed(100))]
+    //Joel wants more space between rows, smaller grid items 
     
     var body: some View {
        NavigationStack{
@@ -29,10 +30,13 @@ struct CategoryView: View {
                            VStack{
                                Button {
                                    viewModel.currentResponse.category = category
+                                   viewModel.currentResponse.categoryString = category.rawValue
                                    
                                } label: {
                                    
-                                   Image(systemName: category.imageName)
+                                   Image(category.imageName)
+                                       .resizable()
+                                       .scaledToFit()
                                    
                                }
                                .buttonStyle(change: (viewModel.currentResponse.category == category))
@@ -40,6 +44,7 @@ struct CategoryView: View {
                                .font(.title)
                                
                                Text(category.rawValue)
+                                   .padding(.bottom)
                                    
                            } .accessibilityElement(children: .combine)
                            

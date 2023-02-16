@@ -22,23 +22,30 @@ enum Category: String, CaseIterable {
     var imageName: String {
         switch self {
         case .lateBus:
-            return "bus"
+            return "lateBus"
+            //"clock.badge.exclamationmark.fill"
         case .noShow:
-            return "figure.wave"
+            return "noShow"
+                //"figure.wave"
         case .busStop:
-            return "sailboat.fill"
+            return "busStop"
+            //signpost.left.fill
         case .safety:
-            return "bus"
+            return "safetyTriangle"
+            //"exclamationmark.triangle.fill"
         case .accessibility:
-            return "bus"
+            return "accessibility"
+            //"figure.roll"
         case .busDriver:
-            return "bus"
+            return "driver"
         case .compliments:
-            return "bus"
+            return "compliments"
+            //"trophy.fill"
         case .cleanliness:
-            return "bus"
+            return "cleanliness"
         case .other:
-            return "bus"
+            return "other"
+            //"ellipsis"
         
         }
     }

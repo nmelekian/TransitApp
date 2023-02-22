@@ -13,16 +13,10 @@ struct ContentView: View {
     
     @EnvironmentObject var viewModel: ViewModel
     
- 
-    
-    
-   
-    
     @FetchRequest(sortDescriptors: []) var responses: FetchedResults<Response>
     
-    
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $viewModel.path) {
             VStack {
                 Spacer()
                     .frame(height:150)
@@ -31,92 +25,90 @@ struct ContentView: View {
                     .bold()
                     .padding()
                 
-                NavigationLink {
-                    CategoryView()
-                } label: {
+                NavigationLink(value: ViewModel.Route.category) {
                     Text("+ Share Feedback")
                         .font(.title)
                         .foregroundColor(.black)
                         .bold()
                         .padding()
-                    
-                    
                 }
-            
                 .buttonStyle(.borderedProminent)
-                    .padding()
+                .padding()
+                
+                .navigationDestination(for: ViewModel.Route.self){route in
+                    route.view
+                }
                 
                 Spacer()
                     .frame(height: 100)
                 
-               
-                    List {
-                        Section {
-                            ForEach(viewModel.previousResponses) { response in
-                                NavigationLink {
-                                    VStack(alignment: .leading) {
-                                        
-                                        Group {
-                                            Text("Date: \(response.date.formatted())")
-                                            Divider()
-                                            Text("Route: \(response.busRoute)")
-                                            Divider()
-                                            Text("Bus Number: \(response.busNumber)")
-                                            Divider()
-                                            Text("Location: \(response.location)")
-                                            Divider()
-                                        }
-                                        Group {
-                                            Text("Category: \(response.categoryString)")
-                                            Divider()
-                                            Text("Details: \(response.details)")
-                                        }
-                                           
+                
+                List {
+                    Section {
+                        ForEach(viewModel.previousResponses) { response in
+                            NavigationLink {
+                                VStack(alignment: .leading) {
                                     
-                                        
-                                        if response.image.count != 0 {
-                                            Image(uiImage: UIImage(data: response.image)!)
-                                                .resizable()
-                                                .frame(width: 100, height: 100)
-                                                .background(Color.black.opacity(0.2))
-                                                .aspectRatio(contentMode: .fill)
-                                        } else {
-                                            Divider()
-                                            Text("No image")
-                                        }
-                                      
-                                    }.navigationTitle("Past Feedback")
-                                } label: {
-                                    Text("\(response.date)")
-                                }
+                                    Group {
+                                        Text("Date: \(response.date.formatted())")
+                                        Divider()
+                                        Text("Route: \(response.busRoute)")
+                                        Divider()
+                                        Text("Bus Number: \(response.busNumber)")
+                                        Divider()
+                                        Text("Location: \(response.location)")
+                                        Divider()
+                                    }
+                                    Group {
+                                        Text("Category: \(response.categoryString)")
+                                        Divider()
+                                        Text("Details: \(response.details)")
+                                    }
+                                    
+                                    
+                                    if response.image.count != 0 {
+                                        Image(uiImage: UIImage(data: response.image)!)
+                                            .resizable()
+                                            .frame(width: 100, height: 100)
+                                            .background(Color.black.opacity(0.2))
+                                            .aspectRatio(contentMode: .fill)
+                                    } else {
+                                        Divider()
+                                        Text("No image")
+                                    }
+                                    
+                                }.navigationTitle("Past Feedback")
+                            } label: {
+                                Text("\(response.date)")
                             }
-                            
-                        } header: {
-                            Text("Past Feedback")
-                                .headerProminence(.increased)
-                            
                         }
+                        
+                    } header: {
+                        Text("Past Feedback")
+                            .headerProminence(.increased)
+                        
                     }
+                }
             }
             
             .navigationDestination(for: Responses.self) { response in
+                Text("\(response.date)")
+                
+                
+                
+                List(viewModel.previousResponses, id: \.self) { response in
+                    
+                    NavigationLink(value: response) {
                         Text("\(response.date)")
-               
-                    
-                    
-                    List(viewModel.previousResponses, id: \.self) { response in
-
-                        NavigationLink(value: response) {
-                            Text("\(response.date)")
-                        }
                     }
-                    
                 }
-            }.navigationBarBackButtonHidden()
+                
+            }
+        }.navigationBarBackButtonHidden()
         
-        }
     }
-    
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -88,9 +88,7 @@ struct SubmitFeedbackPracticeView: View {
                         }
                     }
                 }
-                NavigationLink {
-                    ContentView()
-                } label: {
+                NavigationLink(value: ViewModel.Route.confirmation) {
                     Text("Submit")
                 
                         .frame(maxWidth: .infinity)

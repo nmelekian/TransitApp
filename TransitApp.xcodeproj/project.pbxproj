@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		121CD93629955788007770E3 /* ShannonFeedbackPersonalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121CD93529955788007770E3 /* ShannonFeedbackPersonalDetailsView.swift */; };
+		8449385D29A5D2DB00D6AA9E /* bus.json in Resources */ = {isa = PBXBuildFile; fileRef = 8449385C29A5D2DB00D6AA9E /* bus.json */; };
+		8449385F29A5D2F400D6AA9E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449385E29A5D2F400D6AA9E /* LottieView.swift */; };
+		8449386229A5D31F00D6AA9E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8449386129A5D31F00D6AA9E /* Lottie */; };
+		8449386429A5D34700D6AA9E /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449386329A5D34700D6AA9E /* ConfirmationView.swift */; };
 		A61AC9A3299D274100B54E72 /* EmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC9A2299D274100B54E72 /* EmailService.swift */; };
 		A61AC9A5299D276500B54E72 /* EmailPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC9A4299D276500B54E72 /* EmailPracticeView.swift */; };
 		A6B331F0299D788000D6C00B /* SubmitFeedbackPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B331EF299D788000D6C00B /* SubmitFeedbackPracticeView.swift */; };
@@ -30,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		121CD93529955788007770E3 /* ShannonFeedbackPersonalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFeedbackPersonalDetailsView.swift; sourceTree = "<group>"; };
+		8449385C29A5D2DB00D6AA9E /* bus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bus.json; sourceTree = "<group>"; };
+		8449385E29A5D2F400D6AA9E /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		8449386329A5D34700D6AA9E /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		A61AC9A2299D274100B54E72 /* EmailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailService.swift; sourceTree = "<group>"; };
 		A61AC9A4299D276500B54E72 /* EmailPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPracticeView.swift; sourceTree = "<group>"; };
 		A6B331EF299D788000D6C00B /* SubmitFeedbackPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitFeedbackPracticeView.swift; sourceTree = "<group>"; };
@@ -56,12 +63,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8449386229A5D31F00D6AA9E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8449385B29A5D20600D6AA9E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8449385C29A5D2DB00D6AA9E /* bus.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A6BF82692982AD7B0032BA67 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +101,7 @@
 				A6D3439E29913FFC0016623D /* View */,
 				A6D343A1299140530016623D /* ViewModel */,
 				A6D3439D29913FED0016623D /* Model */,
+				8449385B29A5D20600D6AA9E /* Resources */,
 				A6BF82792982AD7C0032BA67 /* Assets.xcassets */,
 				A6BF827B2982AD7C0032BA67 /* Preview Content */,
 			);
@@ -124,6 +141,8 @@
 				121CD93529955788007770E3 /* ShannonFeedbackPersonalDetailsView.swift */,
 				A6B331EF299D788000D6C00B /* SubmitFeedbackPracticeView.swift */,
 				A61AC9A4299D276500B54E72 /* EmailPracticeView.swift */,
+				8449385E29A5D2F400D6AA9E /* LottieView.swift */,
+				8449386329A5D34700D6AA9E /* ConfirmationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +171,9 @@
 			dependencies = (
 			);
 			name = TransitApp;
+			packageProductDependencies = (
+				8449386129A5D31F00D6AA9E /* Lottie */,
+			);
 			productName = TransitApp;
 			productReference = A6BF82722982AD7B0032BA67 /* TransitApp.app */;
 			productType = "com.apple.product-type.application";
@@ -180,6 +202,9 @@
 				Base,
 			);
 			mainGroup = A6BF82692982AD7B0032BA67;
+			packageReferences = (
+				8449386029A5D31F00D6AA9E /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = A6BF82732982AD7B0032BA67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -196,6 +221,7 @@
 			files = (
 				A6BF827D2982AD7C0032BA67 /* Preview Assets.xcassets in Resources */,
 				A6BF827A2982AD7C0032BA67 /* Assets.xcassets in Resources */,
+				8449385D29A5D2DB00D6AA9E /* bus.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +241,10 @@
 				A61AC9A3299D274100B54E72 /* EmailService.swift in Sources */,
 				A6BF82892982AFFC0032BA67 /* DataController.swift in Sources */,
 				121CD93629955788007770E3 /* ShannonFeedbackPersonalDetailsView.swift in Sources */,
+				8449386429A5D34700D6AA9E /* ConfirmationView.swift in Sources */,
 				A6B331F0299D788000D6C00B /* SubmitFeedbackPracticeView.swift in Sources */,
 				A6BF82B3298AAA2B0032BA67 /* ButtonStyles.swift in Sources */,
+				8449385F29A5D2F400D6AA9E /* LottieView.swift in Sources */,
 				A6BF828C2982BA270032BA67 /* Response+CoreDataClass.swift in Sources */,
 				A61AC9A5299D276500B54E72 /* EmailPracticeView.swift in Sources */,
 				A6BF82912982DF1F0032BA67 /* ResponseModel.swift in Sources */,
@@ -423,6 +451,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8449386029A5D31F00D6AA9E /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8449386129A5D31F00D6AA9E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8449386029A5D31F00D6AA9E /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A6BF82852982AFCC0032BA67 /* TransitFeedback.xcdatamodeld */ = {

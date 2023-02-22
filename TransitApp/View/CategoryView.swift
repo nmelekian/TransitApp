@@ -50,9 +50,7 @@ struct CategoryView: View {
                    }
                    Spacer(minLength: 50)
                    
-                   NavigationLink {
-                       FeedbackEventDetailsView()
-                   } label: {
+                   NavigationLink (value: ViewModel.Route.eventDetails){
                        Text("Next")
                            .frame(maxWidth: .infinity)
                            .foregroundColor(.black)

@@ -94,9 +94,7 @@ struct FeedbackEventDetailsView: View {
                 .padding()
                 
                 
-                NavigationLink {
-                    ShannonFeedbackPersonalDetailsView()
-                } label: {
+                NavigationLink (value: ViewModel.Route.personalDetails){
                     Text("Next")
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.black)

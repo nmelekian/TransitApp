@@ -88,9 +88,7 @@ struct ShannonFeedbackPersonalDetailsView: View {
                         }
                     }
                 }
-                NavigationLink {
-                    SubmitFeedbackPracticeView()
-                } label: {
+                NavigationLink(value: ViewModel.Route.submit) {
                     Text("Next")
                 
                         .frame(maxWidth: .infinity)

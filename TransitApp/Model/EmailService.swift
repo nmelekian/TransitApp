@@ -28,7 +28,7 @@ class EmailService {
 //        print("Data: \(String(data: data, encoding: .utf8))")
         
         let request: URLRequest = {
-            let apiKey = "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"
+            let apiKey = ""
             
             let url = URL(string: "https://api.sendgrid.com/v3/mail/send")!
             var request = URLRequest(url: url)

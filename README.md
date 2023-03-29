@@ -1,3 +1,4 @@
+
 # Better Ride
 
 TransitApp, otherwise known by the new name of BetterRide, is an app designed for public transportation users in the Detroit area to help provide feedback about their ride in a more effective way.
@@ -9,23 +10,6 @@ The city of Detroit has a large problem with transportation. Unreliable bus ride
 Main Function
 
 The main function of BetterRide is to provde a feedback form for transit riders to use. With a seamless flow between pages, the app provides a smooth, simple and accessible way to provide feedback. By choosing the category of complaint, the date of the event, and providing images in your report will help to give the necessary information to the Department of Transportation and other offices related to the rider experience. Our goal is to help the city of Detroit improve public transportation.
-
-
-
-
-
-
-## Screens
-![First Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/First%20Screen%20with%20Feedback.PNG)
-
-![Second Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/Categories.PNG)
-
-![Third Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/More%20Details.png)
-
-![Fourth Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/Contact%20Info.PNG)
-
-![Fifth Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/Review%20Submit%20Full.png)
-
 
 
 
@@ -104,3 +88,15 @@ I would like to thank my team (names below) for all of the hard work everyone pr
 ## Swift Documentation
 
 [Documentation](https://developer.apple.com/documentation/swift)
+
+
+## Screens
+![First Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/First%20Screen%20with%20Feedback.PNG)
+
+![Second Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/Categories.PNG)
+
+![Third Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/More%20Details.png)
+
+![Fourth Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/Contact%20Info.PNG)
+
+![Fifth Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/Review%20Submit%20Full.png)

@@ -14,6 +14,32 @@ The main function of BetterRide is to provde a feedback form for transit riders 
 
 
 
+
+## Screens
+![First Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/First%20Screen%20with%20Feedback.PNG)
+
+![Second Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/Categories.PNG)
+
+![Third Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/More%20Details.png)
+
+![Fourth Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/Contact%20Info.PNG)
+
+![Fifth Screen](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/Review%20Submit%20Full.png)
+
+
+
+
+
+
+
+## Features
+
+- Dark mode
+- Past Feedback Results
+- Local data storage for past results (coming soon)
+- Simple, easy to use interface
+- Fully compatible with Apple Accessibility tools
+
 ## Color Reference
 The color scheme used for the BetterRide App
 

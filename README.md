@@ -22,17 +22,18 @@ The main function of BetterRide is to provde a feedback form for transit riders 
 - Past Feedback Results
 - Local data storage for past results (coming soon)
 - Simple, easy to use interface
-- Fully compatible with Apple Accessibility tools
+- Fully compatible with Apple Accessibility tools (coming soon)
 
 ## Color Reference
 The color scheme used for the BetterRide App
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) #FFFFFF|
-| Example Color | ![#f8f8f8](https://via.placeholder.com/10/9DD3B3?text=+) #9DD3B3|
-| Example Color | ![#00b48a](https://via.placeholder.com/10/17A494?text=+) #17A494|
-| Example Color | ![#00d1a0](https://via.placeholder.com/10/004447?text=+) #004447|
+| Color #1 | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) #FFFFFF|
+| Color #2 | ![#9DD3B3](https://via.placeholder.com/10/9DD3B3?text=+) #9DD3B3|
+| Color #3 | ![#17A494](https://via.placeholder.com/10/17A494?text=+) #17A494|
+| Color #4 | ![#004447](https://via.placeholder.com/10/004447?text=+) #004447|
+| Color #5 | ![#000000](https://via.placeholder.com/10/000000?text=+) #000000|
 
 
 ## API Reference

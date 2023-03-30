@@ -73,6 +73,17 @@ After installing the cocapod into your project, import Lottie with:
 ```
 
 
+
+## Lessons Learned
+
+What did you learn while building this project? What challenges did you face and how did you overcome them?
+
+This project was truly a good learning experience for me. It helped me to practice and really develop my skills in MVVM formatting of my code, ensuring clean delineations of my view, models/data and my view models to connect all the data together. 
+#### ![MVVM Screenshot:](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/BetterRide%20MVVM.png)
+
+This project was a good opportunity to understand the importance of using a source of truth for your data in projects. Utilizing EnvironmentObject and to contain persistant data throughout the app was a very helpful tool. I wanted to implement CoreData, and still intend to, but due to the scope of our challenge and the timeframe that we had, it was not a necessary feature at the time. I liked getting to play with such a variety of tools and garner some skills with code that I didn't have previously.
+#### ![ViewModel Screenshot:](https://github.com/nmelekian/TransitApp/blob/main/Completed%20BetterRide%20Screenshots/BetterRide%20ViewModel.png)
+
 ## Acknowledgements
 I would like to thank my team (names below) for all of the hard work everyone provided. It was a collaborative effort for this challenge to be completed, and the ideas were not mine alone. 
 

@@ -25,7 +25,7 @@ The main function of BetterRide is to provde a feedback form for transit riders 
 - Fully compatible with Apple Accessibility tools (coming soon)
 
 ## Color Reference
-The color scheme used for the BetterRide App
+The color scheme used for the BetterRide App. We wanted to focus on use of the Detroit city colors, as they have an inviting feeling to them, and already align with the themes of the Detroit website and other services.
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |

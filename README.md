@@ -1,7 +1,7 @@
 
 # Better Ride
 
-TransitApp, otherwise known by the new name of BetterRide, is an app designed for public transportation users in the Detroit area to help provide feedback about their ride in a more effective way.
+TransitApp, otherwise known by the new name of BetterRide, is an app designed to help public transportation users in the Detroit area provide feedback about their ride in a more effective way.
 
 
 ## Background

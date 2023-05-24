@@ -2,7 +2,7 @@
 //  LottieView.swift
 //  TransitApp
 //
-//  Created by Nicholas Melekian on 2/22/23.
+//  Created by Anahita Zahertar on 2/22/23.
 //
 
 import SwiftUI
